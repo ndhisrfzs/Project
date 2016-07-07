@@ -7,3 +7,6 @@
 [submodule "3rd/lsocket"]
 	path = 3rd/lsocket
 	url = https://github.com/cloudwu/lsocket.git
+[submodule "3rd/skynet_package"]
+	path = 3rd/skynet_package
+	url = https://github.com/cloudwu/skynet_package.git
