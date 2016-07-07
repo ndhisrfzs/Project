@@ -1,13 +1,13 @@
-skynet_root = "../3rd/skynet/"
-root = "./"
+skynet_root = "3rd/skynet/"
+root = "server/"
 thread = 8
 logger = nil
 harbor = 0
 start = "main"
 bootstrap = "snlua bootstrap"	-- The service for bootstrap
 
-lua_path = skynet_root.."lualib/?.lua"
+lua_path = skynet_root.."lualib/?.lua;"..root.."service/?.lua;"..root.."lualib/?.lua"
 lua_cpath = skynet_root.."luaclib/?.so"
-luaservice = skynet_root.."service/?.lua;"..skynet_root.."lualib/?.lua;"..root.."service/?.lua"
+luaservice = skynet_root.."service/?.lua;"..skynet_root.."lualib/?.lua;"..root.."service/?.lua;"..root.."lualib/?.lua"
 lualoader = skynet_root.."lualib/loader.lua"
 cpath = skynet_root.."cservice/?.so"
