@@ -10,3 +10,9 @@
 [submodule "3rd/skynet_package"]
 	path = 3rd/skynet_package
 	url = https://github.com/cloudwu/skynet_package.git
+[submodule "lua-cjson"]
+	path = lua-cjson
+	url = https://github.com/mpx/lua-cjson.git
+[submodule "3rd/lua-cjson"]
+	path = 3rd/lua-cjson
+	url = https://github.com/mpx/lua-cjson.git

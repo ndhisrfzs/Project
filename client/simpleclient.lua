@@ -14,6 +14,10 @@ message.register(string.format("%s/common/proto/%s.sproto", PATH, "proto"))
 message.peer(IP, 5678)
 message.connect()
 
+local function sleep(n)
+   os.execute("sleep " .. n)
+end
+
 function event.ping()
 	print("ping")
 end
@@ -26,6 +30,7 @@ function event.login(_, resp)
 		print("password error")
 	else
 		print("login success")
+		message.request("ping")
 	end
 end
 

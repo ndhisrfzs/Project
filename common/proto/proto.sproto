@@ -23,3 +23,5 @@ register 2 {
 		ok 0 : boolean
 	}
 }
+
+ping 3 { }

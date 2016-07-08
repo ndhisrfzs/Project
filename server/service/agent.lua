@@ -8,20 +8,7 @@ local data = {}
 local cli = client.handler()
 
 function cli:ping()
-	assert(self.login)
 	log "ping"
-end
-
-function cli:login()
-	assert(not self.login)
-	if data.fd then
-		log("login fail %s fd=%d", data.userid, self.fd)
-		return { ok = false }
-	end
-	data.fd = self.fd
-	self.login = true
-	log("login succ %s fd=%d", data.userid, self.fd)
-	return { ok = true }
 end
 
 local function new_user(fd)
@@ -47,6 +34,7 @@ function agent.assign(fd, userid)
 	if data.exit then
 		return false
 	end
+	data.fd = fd
 	if data.userid == nil then
 		data.userid = userid
 	end
